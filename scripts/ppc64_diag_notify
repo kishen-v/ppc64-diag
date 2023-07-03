@@ -64,6 +64,7 @@ if (defined $se_vars->{"RefCode"}) {
 	push(@lines, "The Service Request Number(s)/Probable Cause(s)");
 	push(@lines, "(causes are listed in descending order of probability):");
 	push(@lines, "");
+	push(@lines, $se_vars->{"Description"});
 	@description_lines = split(/\|/, $se_vars->{"Description"});
 	if (substr($se_vars->{"RefCode"}, 0, 1) eq '#') {
 		push(@lines, substr($se_vars->{"RefCode"}, 0, 8));
